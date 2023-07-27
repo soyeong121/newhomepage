@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>책방</title>
+    <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
+    <script src="js/script.js" type="text/javascript"></script>
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/style1.css">
+</head>
+
+<body>
+    <header>
+        <a id="menu-icon" href="#"><img src="images/menu-icon.png" alt="menu-icon"></a>
+        <a id="logo" href="index1.html"><img src="images/logo.png" alt="logo"></a>
+        <div id="header-icons">
+            <a href="#"><img src="images/search-icon.png" alt="search-icon">
+                <p>검색</p>
+            </a>
+            <a href="#"><img src="images/shopping-icon.png" alt="shopping-icon">
+                <p>장바구니</p>
+            </a>
+            <a href="#"><img src="images/logIn-icon.png" alt="logIn-icon">
+                <p>로그인</p>
+            </a>
+        </div>
+    </header>
+    <div id="container">
+        <nav id="nav">
+            <ul>
+                <li><a href="index1.html">Home</a></li>
+                <li><a href="index2.html">베스트</a></li>
+                <li><a href="index3.html">신상품</a></li>
+                <li><a href="index3.html">이벤트</a></li>
+                <li><a href="index3.html">굿즈/GIFT</a></li>
+                <li><a href="index3.html">책방ONLY</a></li>
+            </ul>
+        </nav>
+        <div id="banner">
+            <div id="banner-container">
+                <div id="banner-content">
+                    <ul>
+                        <li class="bn active"><img src="images/banner1.png" alt="banner1"></li>
+                        <li class="bn"><img src="images/banner2.png" alt="banner2"></li>
+                        <li class="bn"><img src="images/banner3.png" alt="banner3"></li>
+                    </ul>
+                </div> <!-- /#banner-content -->
+                <div id="banner-number">
+                    <button class="page-btn prev-btn"></button>
+                    <button class="page-btn next-btn"></button>
+                    <div id="number-no">
+                        <span id="current-slide-no"></span>
+                        <span id="slash">/</span>
+                        <span id="total-slide-no"></span>
+                    </div> <!-- /#number-no -->
+                </div> <!-- /#banner-number -->
+            </div> <!-- /#banner-container -->
+        </div> <!-- /#banner -->
+    </div> <!-- /#container -->
+    <div id="today-book">
+        <h2>오늘의 책방</h2>
+        <ul class="today-nav">
+            <li><a href="#">전체</a></li>
+            <li><a href="#">국내도서</a></li>
+            <li><a href="#">외국도서</a></li>
+            <li><a href="#">eBook</a></li>
+            <li><a href="#">책방ONLY</a></li>
+        </ul>
+        <ul id="todayBook-image">
+            <li>
+                <a href="#"><img src="images/todayBook1.jpg" onmouseenter="zoomIn(event)" onmouseleave="zoomOut(event)"
+                        alt="todayBook1"></a>
+                <div id="to-text1" class="today-text">
+                    <p>[시/에세이] 시로 배우는 예쁜 말</p>
+                    <span>10%</span>
+                    <p>9,900원</p>
+                </div>
+            </li>
+            <li>
+                <a href="#"><img onmouseenter="zoomIn(event)" onmouseleave="zoomOut(event)" src="images/todayBook2.jpg"
+                        alt="todayBook2"></a>
+                <div id="to-text2" class="today-text">
+                    <p>[국내도서] 귀한 서점에 누추하신 분이</p>
+                    <span>10%</span>
+                    <p>12,420원</p>
+                </div>
+            </li>
+            <li>
+                <a href="#"><img onmouseenter="zoomIn(event)" onmouseleave="zoomOut(event)" src="images/todayBook3.jpg"
+                        alt="todayBook3"></a>
+                <div id="to-text3" class="today-text">
+                    <p>[국내도서] 매일 갑니다, 편의점</p>
+                    <span>10%</span>
+                    <p>12,600원</p>
+                </div>
+            </li>
+            <li>
+                <a href="#"><img onmouseenter="zoomIn(event)" onmouseleave="zoomOut(event)" src="images/todayBook4.jpeg"
+                        alt="todayBook4"></a>
+                <div id="to-text4" class="today-text">
+                    <p>[국내도서] 우리는 천천히 오래오래</p>
+                    <span>10%</span>
+                    <p>13,500원</p>
+                </div>
+            </li>
+            <li>
+                <a href="#"><img onmouseenter="zoomIn(event)" onmouseleave="zoomOut(event)" src="images/todayBook5.jpg"
+                        alt="todayBook5"></a>
+                <div id="to-text5" class="today-text">
+                    <p>[국내도서] 천문학자는 별을 보지 않는다</p>
+                    <span>10%</span>
+                    <p>13,500원</p>
+                </div>
+            </li>
+        </ul>
+    </div> <!-- /#today-book -->
+    <div id="new-book">
+        <h2>신간 책방</h2>
+        <ul class="today-nav">
+            <li><a href="#">전체</a></li>
+            <li><a href="#">국내도서</a></li>
+            <li><a href="#">외국도서</a></li>
+            <li><a href="#">eBook</a></li>
+            <li><a href="#">책방ONLY</a></li>
+        </ul>
+        <div id="new-container">
+            <ul id="newBook-contents">
+                <li>
+                    <img src="images/newBook1.png" alt="newBook1">
+                    <div class="new-text">
+                        <div class="newText-container1">
+                            <p>[에세이]&nbsp&nbsp너의 안부</p>
+                            <span>상현주 ∙ 몽스북</span>
+                            <span>10%</span>
+                            <p>15,120원</p>
+                        </div>
+                        <div class="newText-container2">
+                            <p>"그런 시간을 보내고, 사람들의 안부가 궁금해졌다"</p>
+                            <p>
+                                캄캄한 터널인 줄 알았는데 <br>
+                                저 너머로 빛 한 줄기가 세어 나온다. <br>
+                                위로는 어느새 내가 받고 있었다.
+                            </p>
+                            <span>
+                                #감사하는 삶 <br>
+                                #묵직한 감동 <br>
+                                #위로를 전하는
+                            </span>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <img src="images/newBook2.png" alt="newBook2">
+                    <div class="new-text">
+                        <div class="newText-container1">
+                            <p>[시/에세이]&nbsp&nbsp너무 잘하려고 애쓰지 마라</p>
+                            <span>나태주 ∙ 열림원</span>
+                            <span>10%</span>
+                            <p>12,600원</p>
+                        </div>
+                        <div class="newText-container2">
+                            <p>"오늘도 이것으로 좋았습니다"</p>
+                            <p>
+                                오늘의 일은 오늘의 일로 충분하다 <br>
+                                너, 너무도 잘하려고 애쓰지 마라.
+                            </p>
+                            <span>
+                                #나에게 주는 힐링 <br>
+                                #응원의 인사 <br>
+                                #오늘도 수고했어
+                            </span>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <img src="images/newBook3.png" alt="newBook3">
+                    <div class="new-text">
+                        <div class="newText-container1">
+                            <p>[국내도서]&nbsp&nbsp밥 챙겨 먹어요, 행복하세요</p>
+                            <span>마포농수산쎈타 ∙ 세미콜론</span>
+                            <span>10%</span>
+                            <p>17,820원</p>
+                        </div>
+                        <div class="newText-container2">
+                            <p>"매일 만날 수 있는 확실한 행복에 대하여"</p>
+                            <p>
+                                마음 편한 맛이 필요한 날, <br>
+                                수십만 트위터리안들의 가슴을 적신 밥과 술 한상차림 레시피
+                            </p>
+                            <span>
+                                #요리할때 <br>
+                                #자취생 필수템 <br>
+                                #나만 알고 싶은 레시피
+                            </span>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+            <button id="new-prev"><img src="images/prev1.png" alt="prev1"></button>
+            <button id="new-next"><img src="images/next1.png" alt="next1"></button>
+        </div> <!-- /#newBook-contents -->
+    </div> <!-- /#new-book -->
+    <div id="subBanner">
+        <div>
+            <ul id="sub-banner-container">
+                <li><img src="images/sub-banner1.png" alt="sub-banner1"></li>
+                <li><img src="images/sub-banner2.png" alt="sub-banner2"></li>
+                <li><img src="images/sub-banner3.png" alt="sub-banner3"></li>
+            </ul>
+        </div>
+    </div> <!-- /#subBanner -->
+    <div id="best-sellers">
+        <div id="best-container">
+            <h2>Best Sellers</h2>
+            <ul id="best-nav" class="today-nav">
+                <li><a href="#">전체</a></li>
+                <li><a href="#">국내도서</a></li>
+                <li><a href="#">외국도서</a></li>
+                <li><a href="#">eBook</a></li>
+                <li><a href="#">책방ONLY</a></li>
+            </ul> <!-- /#best-nav -->
+            <ul id="best-books1" class="best-sellers-list">
+                <li>
+                    <p>1</p>
+                    <a href="index2.html"><img src="images/bestSellers1.jpeg" alt="best-seller1"></a>
+                    <p>만일 내가 인생을 다시 산다면</p>
+                    <span>김혜남∙메이븐</span>
+                </li>
+                <li>
+                    <p>2</p>
+                    <a href="index2.html"><img src="images/bestSellers2.jpg" alt="best-seller2"></a>
+                    <p>내가 틀릴 수도 있습니다</p>
+                    <span>비욘나타코린데블라드∙다산초당</span>
+                </li>
+                <li>
+                    <p>3</p>
+                    <a href="index2.html"><img src="images/bestSellers3.jpeg" alt="best-seller3"></a>
+                    <p>불편한 편의점</p>
+                    <span>김호연∙나무옆의자</span>
+                </li>
+                <li>
+                    <p>4</p>
+                    <a href="index2.html"><img src="images/bestSellers4.jpeg" alt="best-seller4"></a>
+                    <p>트렌드 코리아 2023</p>
+                    <span>추예린 외 9명∙미래의창</span>
+                </li>
+                <li>
+                    <p>5</p>
+                    <a href="index2.html"><img src="images/bestSellers5.jpeg" alt="best-seller5"></a>
+                    <p>불편한 편의점2</p>
+                    <span>김호연∙나무옆의자</span>
+                </li>
+            </ul> <!-- /#best-books1 -->
+            <ul id="best-books2" class="best-sellers-list">
+                <li>
+                    <p>6</p>
+                    <a href="index2.html"><img src="images/bestSellers6.jpeg" alt="best-seller6"></a>
+                    <p>아버지의 해방일지</p>
+                    <span>정지아∙창비</span>
+                </li>
+                <li>
+                    <p>7</p>
+                    <a href="index2.html"><img src="images/bestSellers7.jpeg" alt="best-seller7"></a>
+                    <p>오늘 밤, 세계에서 이 사랑이 사라진다해도</p>
+                    <span>이치조 미사키∙모모</span>
+                </li>
+                <li>
+                    <p>8</p>
+                    <a href="index2.html"><img src="images/bestSellers8.jpeg" alt="best-seller8"></a>
+                    <p>슬램덩크 챔프</p>
+                    <span>이노우에 타케히코∙대원</span>
+                </li>
+                <li>
+                    <p>9</p>
+                    <a href="index2.html"><img src="images/bestSellers9.jpeg" alt="best-seller9"></a>
+                    <p>원씽 THE ONE THING</p>
+                    <span>게리켈러 외 1명∙비지니스북스</span>
+                </li>
+                <li>
+                    <p>10</p>
+                    <a href="index2.html"><img src="images/bestSellers10.jpeg" alt="best-seller10"></a>
+                    <p>역행자</p>
+                    <span>자청∙웅진지식하우스</span>
+                </li>
+            </ul> <!-- /#best-books2 -->
+        </div> <!-- /#best-container -->
+    </div> <!-- /#best-sellers -->
+    <div id="goods">
+        <div id="goods-container">
+            <h2>굿즈/GIFT</h2>
+            <ul id="goods-nav" class="today-nav">
+                <li><a href="#">전체</a></li>
+                <li><a href="#">국내도서</a></li>
+                <li><a href="#">외국도서</a></li>
+                <li><a href="#">eBook</a></li>
+                <li><a href="#">책방ONLY</a></li>
+            </ul>
+            <button id="goods-next"><img src="images/next2.png" alt="next2"></button>
+            <button id="goods-prev"><img src="images/prev2.png" alt="prev2"></button>
+            <div>
+                <ul id="goods-contents" class="goods-images">
+                    <li id="goods-img">
+                        <img src="images/goods1.jpg" alt="goods1">
+                        <p>[2023 날짜형] 2023 꽃길여담 다이어리</p>
+                        <span>11,800원</span>
+                    </li>
+                    <li>
+                        <img src="images/goods2.jpg" alt="goods2">
+                        <p>[한정판] 모나미 153 블랙 미니 5본입</p>
+                        <p>20%</p>
+                        <span>8,000원</span>
+                    </li>
+                    <li id="goods-img">
+                        <img src="images/goods3.jpg" alt="goods3">
+                        <p>[책방굿즈] 윤동주 팔각 머그 드립백 세트</p>
+                        <p>30%</p>
+                        <span>11,800원</span>
+                    </li>
+                    <li>
+                        <img src="images/goods4.jpg" alt="goods4">
+                        <p>[닌텐도][스위치 타이틀] 젤다의 전설 스카이 워드</p>
+                        <span>24,500원</span>
+                    </li>
+                    <li id="goods-img">
+                        <img src="images/goods5.jpg" alt="goods5">
+                        <p>[삼성전자] 갤럭시 버즈2 ANC 무선 블루투스 이어폰</p>
+                        <p>27%</p>
+                        <span>109,000원</span>
+                    </li>
+                    <li>
+                        <img src="images/goods6.jpg" alt="goods6">
+                        <p>[책방굿즈] 시그니처 독서등 퐁듀16 Table Stand</p>
+                        <span>280,000원</span>
+                    </li>
+                    <li id="goods-img">
+                        <img src="images/goods7.jpg" alt="goods7">
+                        <p>[책방굿즈] 지적인 셀렉트 콜라보 박스</p>
+                        <p>10%</p>
+                        <span>44,550원</span>
+                    </li>
+                </ul> <!-- /#goods-contents -->
+            </div> <!-- /#goods-contents를 감싸는 div -->
+        </div> <!-- /#goods-container -->
+    </div> <!-- /#goods -->
+    <footer id="footer">
+        <div id="footer-container1">
+            <p>회사소개&nbsp&nbsp|</p>
+            <p>이용약관&nbsp&nbsp|</p>
+            <p>개인정보처리방침&nbsp&nbsp|</p>
+            <p>도서홍보안내&nbsp&nbsp|</p>
+            <p>광고안내&nbsp&nbsp|</p>
+            <p>제휴안내&nbsp&nbsp|</p>
+            <p>복지제휴&nbsp&nbsp|</p>
+            <p>매장안내&nbsp&nbsp|</p>
+            <p>대량주문안내</p>
+        </div>
+        <div id="footer-container2">
+            <img src="images/footerLogo.png" alt="footer-logo"></li>
+            <p>
+                책방(주) <br>
+                서울시 칠팔구 은행로 11, 0층~0층 <br>
+                사업자등록번호 : 000-00-00000 통신판매업신고 : 제 0000-00000호 사업자 정보확인 <br>
+                호스팅 서비스사업자 : 책방(주) <br>
+                Copyright ⓒ bookroom Corp. All Rights Reserved.
+            </p>
+        </div>
+    </footer>
+
+    <!-- today-book 이미지 커졌다 줄었다 -->
+    <script>
+        function zoomIn(event) {
+            event.target.style.transform = "scale(1.1)";
+            event.target.style.zIndex = 1;
+            event.target.style.transition = "all 0.5s";
+        }
+
+        function zoomOut(event) {
+            event.target.style.transform = "scale(1)";
+            event.target.style.zIndex = 0;
+            event.target.style.transition = "all 0.5s";
+        }
+    </script>
+</body>
+
+</html>
