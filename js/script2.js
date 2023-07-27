@@ -1,4 +1,20 @@
 $(function () {
+    // top button
+    var btn = $('#top');
+
+    $(window).scroll(function () {
+        if ($(window).scrollTop() > 300) {
+            btn.addClass('show');
+        } else {
+            btn.removeClass('show');
+        }
+    });
+
+    btn.on('click', function (e) {
+        e.preventDefault();
+        $('html, body').animate({ scrollTop: 0 }, '300');
+    });
+    
     // banner slide
     const list = document.querySelector('#banner-contents');
     const items = document.querySelectorAll('#banner-contents > li');
@@ -56,8 +72,8 @@ $(function () {
     };
 
     // 버튼을 동적으로 생성함과 동시에 이벤트도 연결하며,
-	// 각 이벤트 핸들러 함수는 현재 슬라이드의 인덱스를 담고 있는
-	// selected 변수의 값을 1씩 증감시키며 리스트의 Translate 값을 조정
+    // 각 이벤트 핸들러 함수는 현재 슬라이드의 인덱스를 담고 있는
+    // selected 변수의 값을 1씩 증감시키며 리스트의 Translate 값을 조정
     const makeButton = () => {
         if (items.length > 1) {
             const prevButton = document.createElement('button');

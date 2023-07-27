@@ -1,4 +1,20 @@
 $(function () {
+    // top button
+    var btn = $('#top');
+
+    $(window).scroll(function () {
+        if ($(window).scrollTop() > 300) {
+            btn.addClass('show');
+        } else {
+            btn.removeClass('show');
+        }
+    });
+
+    btn.on('click', function (e) {
+        e.preventDefault();
+        $('html, body').animate({ scrollTop: 0 }, '300');
+    });
+
     // banner-slide
     $('#banner > #banner-container > #banner-number > .page-btn').click(function () {
         var $clicked = $(this);
@@ -36,44 +52,44 @@ $(function () {
     // }, 4000);
 
     var timer;
-    
-    timer = setInterval(function(){
+
+    timer = setInterval(function () {
         $('#banner > #banner-container > #banner-number > .next-btn').click();
     }, 4000);
-    $('#banner-container').mouseover(function(){
+    $('#banner-container').mouseover(function () {
         clearInterval(timer);
     });
-    $('#banner-content').mouseout(function(){
-        timer = setInterval(function(){
+    $('#banner-content').mouseout(function () {
+        timer = setInterval(function () {
             $('#banner > #banner-container > #banner-number > .next-btn').click();
         }, 4000);
     });
-    
+
     // 슬라이더 페이지 번호 지정
-    function pageNumber__Init(){
+    function pageNumber__Init() {
         // 전채 배너 페이지 갯수 세팅해서 .slider 에 'data-slide-total' 넣기
         var totalSlideNo = $('#banner > #banner-container > #banner-content > ul > .bn').length;
         console.log('totalSlideNo' + totalSlideNo);
-        
+
         $('#banner > #banner-container').attr('data-slide-total', totalSlideNo);
-        
+
         // 각 배너 페이지 번호 매기기
-        $('#banner > #banner-container > #banner-content > ul > .bn').each(function(index, node){
+        $('#banner > #banner-container > #banner-content > ul > .bn').each(function (index, node) {
             $(node).attr('data-slide-no', index + 1);
         });
     };
-    
+
     pageNumber__Init();
-    
+
     // 슬라이더 이동시 페이지 번호 변경
-    function updateCurrentPageNumber(){
+    function updateCurrentPageNumber() {
         var totalSlideNo = $('#banner > #banner-container').attr('data-slide-total');
         var currentSlideNo = $('#banner > #banner-container > #banner-content > ul > .bn.active').attr('data-slide-no');
-        
+
         $('#banner > #banner-container > #banner-number > #number-no > #total-slide-no').html(totalSlideNo);
         $('#banner > #banner-container > #banner-number > #number-no > #current-slide-no').html(currentSlideNo);
     };
-    
+
     updateCurrentPageNumber();
 
     // today book image 밑에 텍스트 나오게
