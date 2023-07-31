@@ -34,9 +34,10 @@ button {
     background-color: #f57d1c;
     border-radius: 40px;
     color: white;
+    font-size: 18px;
 
-    width: 50px;
-    height: 50px;
+    width: 70px;
+    height: 70px;
     text-align: center;
     
     position: fixed;

@@ -26,11 +26,12 @@ button {
 #top {
     display: inline-block;
     background-color: #f57d1c;
-    border-radius: 40px;
+    border-radius: 50px;
     color: white;
+    font-size: 18px;
 
-    width: 50px;
-    height: 50px;
+    width: 70px;
+    height: 70px;
     text-align: center;
     
     position: fixed;
