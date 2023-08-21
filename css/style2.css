@@ -206,6 +206,9 @@ header::after { content: ""; display: block; clear: both; }
     border-radius: 50%;
     transform: translateY(-50%);
 }
+.prev:hover, .next:hover {
+    opacity: 1;
+}
 .prev {
     left: 1rem;
     background-image: url('../images/prev1.png');

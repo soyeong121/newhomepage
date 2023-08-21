@@ -184,6 +184,9 @@ header::after {
     border-radius: 50%;
     transform: translateY(-50%);
 }
+.prev:hover, .next:hover {
+    opacity: 1;
+}
 .prev {
     left: 7rem;
     background-image: url('../images/prev1.png');
