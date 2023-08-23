@@ -223,6 +223,7 @@ header::after { content: ""; display: block; clear: both; }
 }
 #todayBook-image {
     width: 1280px;
+    height: 500px;
     margin: 0 auto;
     padding: 40px;
 }
