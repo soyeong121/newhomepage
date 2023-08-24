@@ -301,6 +301,9 @@ h2 {
 }
 
 #goods-container2::after { content: ""; display: block; clear: both; }
+#goods-container2 {
+    margin-top: 150px;
+}
 #goods-container2 > img {
     float: right;
 }
